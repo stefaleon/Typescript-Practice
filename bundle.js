@@ -43,6 +43,10 @@ var user = new User_1.User();
 console.log(user);
 var company = new Company_1.Company();
 console.log(company);
+new google.maps.Map(document.getElementById("map"), {
+    zoom: 1,
+    center: { lat: 0, lng: 0 }
+});
 
 },{"./Company":1,"./User":2}],4:[function(require,module,exports){
 // since we are requiring the top level of faker, load all locales by default

@@ -6,3 +6,7 @@ var user = new User_1.User();
 console.log(user);
 var company = new Company_1.Company();
 console.log(company);
+new google.maps.Map(document.getElementById("map"), {
+    zoom: 1,
+    center: { lat: 0, lng: 0 }
+});
