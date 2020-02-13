@@ -1,0 +1,21 @@
+{
+  "name": "typescript-grider-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "tsc index.ts",
+    "br": "browserify index.js > bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/faker": "^4.1.9",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0"
+  }
+}
