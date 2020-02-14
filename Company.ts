@@ -1,6 +1,7 @@
 import faker = require("faker");
+import { Locationable } from "./CustomMap";
 
-export class Company {
+export class Company implements Locationable {
   companyName: string;
   catchPhrase: string;
   location: {

@@ -1,6 +1,7 @@
 import faker = require("faker");
+import { Locationable } from "./CustomMap";
 
-export class User {
+export class User implements Locationable {
   name: string;
   location: {
     lat: number;

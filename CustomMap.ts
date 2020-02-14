@@ -25,7 +25,7 @@ export class CustomMap {
   }
 }
 
-interface Locationable {
+export interface Locationable {
   location: {
     lat: number;
     lng: number;
