@@ -10,6 +10,9 @@ var Company = /** @class */ (function () {
             lng: +faker.address.longitude()
         };
     }
+    Company.prototype.markerContent = function () {
+        return "\n    <div>\n    <h4>" + this.companyName + "</h4>\n    <h5> " + this.catchPhrase + "</h5>\n    <h5>Lat: " + this.location.lat + "</h5>\n    <h5>Lon: " + this.location.lng + "</h5>\n    </div>   \n    ";
+    };
     return Company;
 }());
 exports.Company = Company;

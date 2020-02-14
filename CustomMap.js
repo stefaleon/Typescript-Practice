@@ -8,10 +8,17 @@ var CustomMap = /** @class */ (function () {
         });
     }
     CustomMap.prototype.addMarker = function (item, label) {
-        new google.maps.Marker({
+        var _this = this;
+        var marker = new google.maps.Marker({
             map: this.googleMap,
             position: item.location,
             label: label
+        });
+        marker.addListener("click", function () {
+            var infoWindow = new google.maps.InfoWindow({
+                content: item.markerContent()
+            });
+            infoWindow.open(_this.googleMap, marker);
         });
     };
     return CustomMap;

@@ -9,10 +9,18 @@ export class CustomMap {
   }
 
   addMarker(item: Locationable, label: string): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: item.location,
       label
+    });
+
+    marker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: item.markerContent()
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
@@ -22,4 +30,5 @@ interface Locationable {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
