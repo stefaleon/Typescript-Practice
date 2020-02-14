@@ -2,11 +2,11 @@
 exports.__esModule = true;
 var User_1 = require("./User");
 var Company_1 = require("./Company");
+var CustomMap_1 = require("./CustomMap");
 var user = new User_1.User();
 console.log(user);
 var company = new Company_1.Company();
 console.log(company);
-new google.maps.Map(document.getElementById("map"), {
-    zoom: 1,
-    center: { lat: 0, lng: 0 }
-});
+var customMap = new CustomMap_1.CustomMap("map");
+customMap.addMarker(user, "user marker");
+customMap.addMarker(company, "company marker");
